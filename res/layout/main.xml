@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainlayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8DC"
+    tools:context=".StepActivity" >
+
+    <RelativeLayout
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/shape" >
+
+        <TextView
+            android:id="@+id/show_step"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/step_number"
+            android:textSize="55sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/btn_bg"
+        android:baselineAligned="false"
+        android:orientation="horizontal"
+        android:paddingBottom="10dip"
+        android:paddingLeft="15dip"
+        android:paddingRight="15dip"
+        android:paddingTop="10dip" >
+
+        <TableLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:paddingLeft="5dip"
+            android:paddingRight="5dip"
+            android:stretchColumns="1" >
+
+            <TableRow
+                android:id="@+id/hide1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/distance" />
+
+                <TextView
+                    android:id="@id/distance"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/km" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/calories" />
+
+                <TextView
+                    android:id="@id/calories"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/calorie" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/hide2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:text="@string/velocity" />
+
+                <TextView
+                    android:id="@id/velocity"
+                    style="@style/small_text_style"
+                    android:gravity="right" />
+
+                <TextView
+                    style="@style/small_text_style"
+                    android:gravity="right"
+                    android:text="@string/kilometer_per_hour" />
+            </TableRow>
+        </TableLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/step_counter"
+        style="@style/small_text_style"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:text="@string/step_number"
+        android:textColor="@color/btn_bg_pressed" />
+
+</RelativeLayout>
